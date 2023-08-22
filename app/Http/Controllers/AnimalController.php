@@ -15,7 +15,8 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        //
+        $animali = Animal::all();
+        return view('admin.dashboard' , compact('animali'));
     }
 
     /**
