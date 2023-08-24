@@ -14,6 +14,7 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Specie</th>
                             <th scope="col">Vaccinazioni</th>
@@ -25,14 +26,17 @@
                     <tbody>
                         @foreach ($animals as $animal)
                             <tr>
+                                <td>{{ $animal->id }}</td>
                                 <td>{{ $animal->nome }}</td>
                                 <td>{{ $animal->specie }}</td>
                                 <td>{{ $animal->vacinazioni }}</td>
                                 <td>{{ $animal->malattie }}</td>
                                 <td>{{ $animal->propietario }}</td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-primary">Show</a>
-                                    <a href="" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{{ route('admin.animals.show', $animal->id) }}"
+                                        class="btn btn-sm btn-primary">Show</a>
+                                    <a href="{{ route('admin.animals.edit', $animal) }}"
+                                        class="btn btn-sm btn-warning">Edit</a>
                                     <form action="" class="d-inline-block project-delete-button" method="POST">
                                         @csrf
                                         @method('DELETE')
