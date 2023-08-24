@@ -37,14 +37,14 @@
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.animals.edit', $animal) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="" class="d-inline-block project-delete-button" method="POST">
+                                    <form action="{{ route('admin.animals.destroy', $animal) }}"
+                                        class="d-inline-block project-delete-button" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger " data-bs-toggle="modal"
                                             data-bs-target="#staticBackdrop">
                                             Delete
                                     </form>
-
                                 </td>
                             </tr>
                         @endforeach
