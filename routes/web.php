@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AnimalController as AnimalController;
+
+use App\Http\Controllers\Admin\DashboardController as DashboardController;
+use App\Http\Controllers\Admin\AnimalController as AnimalController;
+
 
 
 /*
@@ -17,11 +20,12 @@ use App\Http\Controllers\AnimalController as AnimalController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
 
 
-Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function(){
+Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('animals', AnimalController::class);
 });
 

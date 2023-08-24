@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Animal;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
@@ -15,8 +16,9 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        $animali = Animal::all();
-        return view('admin.dashboard' , compact('animali'));
+        $animals = Animal::all();
+
+        return view('admin.animals.index', compact('animals'));
     }
 
     /**
@@ -26,7 +28,7 @@ class AnimalController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.animals.create');
     }
 
     /**
@@ -37,8 +39,18 @@ class AnimalController extends Controller
      */
     public function store(StoreAnimalRequest $request)
     {
-        //
+        $form_data = $request->all();
+
+        $animal = new Animal();
+
+
+        $animal->fill($form_data);
+
+        $animal->save();
+
+        return redirect()->route('admin.animals.index');
     }
+
 
     /**
      * Display the specified resource.

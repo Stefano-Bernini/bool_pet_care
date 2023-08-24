@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -6,7 +6,7 @@
             {{ __('Dashboard') }}
         </h2>
         <div class="row justify-content-center">
-            <div class="col">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">{{ __('User Dashboard') }}</div>
 
@@ -17,30 +17,12 @@
                             </div>
                         @endif
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Specie</th>
-                                    <th scope="col">Vaccinazioni</th>
-                                    <th scope="col">Malattie</th>
-                                    <th scope="col">Proprietario</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($animali as $item)
-                                    <tr>
-                                        <th scope="row">{{ }}</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        {{ __('You are logged in!') }}
                     </div>
                 </div>
+            </div>
+            <div class="col-12 text-center my-5">
+                <a href="{{ Route('admin.animals.index') }}" class="btn btn-primary">Progetti</a>
             </div>
         </div>
     </div>
