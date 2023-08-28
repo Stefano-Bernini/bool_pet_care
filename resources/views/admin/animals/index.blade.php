@@ -17,7 +17,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Specie</th>
-                            <th scope="col">Vaccinazioni</th>
+                            {{-- <th scope="col">Vaccinazioni</th> --}}
                             <th scope="col">Malattie</th>
                             <th scope="col">Proprietario</th>
                             <th scope="col">Strumenti</th>
