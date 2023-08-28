@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Vaccine;
 use App\Http\Requests\StoreVaccineRequest;
 use App\Http\Requests\UpdateVaccineRequest;
