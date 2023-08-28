@@ -1,23 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <div class="jumbotron p-5 mb-4 bg-light rounded-3">
-        <div class="container py-5">
-            <h1 class="display-5 fw-bold">
-                Welcome to BoolPetCare
+    <div class="jumbotron p-5 mb-4 bg-light rounded-3 text-center">
+        <div class="container py-5 text-center">
+            <h1 class="display-5 fw-bold text-center">
+                Benvenuti su BoolPetCare!
             </h1>
 
-            <p class="col-md-8 fs-4">This a preset package with Bootstrap 5 views for laravel projects including laravel
-                breeze/blade. It works from laravel 9.x to the latest release 10.x</p>
-            <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg"
-                type="button">Documentation</a>
+            <p class="display-5 fw fs-4 text-center">BoolPetCare è il gestionale per la vostra Clinica Veterinaria realizzato in  Bootstrap 5<br> e Laravel 9.2 include Laravel
+                breeze e blade.</p>
+            
         </div>
     </div>
 
     <div class="content">
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi
-                deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis
-                accusamus dolores!</p>
+        <div class="container text-center">
+            <img src="{{ url('/img/animali_affezione.jpg') }}" alt="animal">
         </div>
     </div>
 @endsection
+
