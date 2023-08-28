@@ -4,10 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-evenly align-items-center my-5">
-                <h1>I nostri progetti</h1>
+                <h1>I nostri animali</h1>
                 <div class="btn-container">
-                    <a href="{{ Route('admin.animals.create') }}"><button class="btn btn-success">Crea
-                            progetto</button></a>
+                    <a href="{{ Route('admin.animals.create') }}"><button class="btn btn-success">Aggiungi Animale</button></a>
                 </div>
             </div>
             <div class="col-12">
