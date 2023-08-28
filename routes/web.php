@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\DashboardController as DashboardController;
 use App\Http\Controllers\Admin\AnimalController as AnimalController;
-
+use App\Http\Controllers\Admin\VaccineController as VaccineController;
 
 
 /*
@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('animals', AnimalController::class);
+    Route::resource('vaccines', VaccineController::class);
 });
 
 
