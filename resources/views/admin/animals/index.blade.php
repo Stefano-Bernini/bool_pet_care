@@ -37,14 +37,11 @@
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.animals.edit', $animal) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="{{ route('admin.animals.destroy', $animal) }}"
-                                        class="d-inline-block project-delete-button" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger " data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop">
-                                            Delete
-                                    </form>
+                                        <form class='d-inline-block delete-animal-form' action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </form>                                        
                                 </td>
                             </tr>
                         @endforeach
@@ -53,4 +50,5 @@
             </div>
         </div>
     </div>
+    @include('admin.partials.modal_delete')
 @endsection
