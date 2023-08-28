@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="col-12 text-center my-5">
-                <a href="{{ Route('admin.animals.index') }}" class="btn btn-primary">Progetti</a>
+                <a href="{{ Route('admin.animals.index') }}" class="btn btn-primary">Lista degli Animali</a>
             </div>
         </div>
     </div>
