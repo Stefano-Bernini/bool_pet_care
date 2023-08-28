@@ -23,7 +23,7 @@ class AnimalSeeder extends Seeder
             $animal->specie = $faker->randomElement(['Canina', 'Felino', 'Rettile', 'Uccello', 'Roditore']);
             $animal->malattie = $faker->words(4, true);
             $animal->propietario = $faker->name();
-
+            
             $animal->save();
         }
     }
