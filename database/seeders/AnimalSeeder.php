@@ -21,7 +21,6 @@ class AnimalSeeder extends Seeder
             $animal = new Animal();
             $animal->nome = $faker->word(1);
             $animal->specie = $faker->randomElement(['Canina', 'Felino', 'Rettile', 'Uccello', 'Roditore']);
-            $animal->vacinazioni = $faker->words(4, true);
             $animal->malattie = $faker->words(4, true);
             $animal->propietario = $faker->name();
 

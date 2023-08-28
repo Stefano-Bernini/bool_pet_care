@@ -18,7 +18,6 @@ return new class extends Migration
             $table->id();
             $table->string('nome', 30);
             $table->string('specie', 50);
-            $table->string('vacinazioni', 255);
             $table->string('malattie', 150);
             $table->string('propietario', 40);
             $table->timestamps();
