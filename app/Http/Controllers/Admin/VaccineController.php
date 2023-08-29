@@ -48,7 +48,7 @@ class VaccineController extends Controller
      */
     public function show(Vaccine $vaccine)
     {
-        //
+        return view('admin.vaccines.show', compact('vaccine'));
     }
 
     /**
