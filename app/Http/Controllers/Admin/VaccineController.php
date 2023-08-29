@@ -16,7 +16,9 @@ class VaccineController extends Controller
      */
     public function index()
     {
-        //
+        $vaccines = Vaccine::all();
+
+        return view('admin.vaccines.index', compact('vaccines'));
     }
 
     /**
@@ -82,6 +84,7 @@ class VaccineController extends Controller
      */
     public function destroy(Vaccine $vaccine)
     {
-        //
+        $vaccine->delete();
+        return redirect()->route('admin.vaccines.index');
     }
 }
