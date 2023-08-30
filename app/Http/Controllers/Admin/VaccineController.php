@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Vaccine;
 use App\Http\Requests\StoreVaccineRequest;
 use App\Http\Requests\UpdateVaccineRequest;
+use Illuminate\Support\Str;
 
 class VaccineController extends Controller
 {
@@ -38,6 +39,7 @@ class VaccineController extends Controller
     public function store(StoreVaccineRequest $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($data['name'], '-');
 
         $animal = new Vaccine();
 
@@ -46,7 +48,7 @@ class VaccineController extends Controller
 
         $animal->save();
 
-        return redirect()->route('admin.vaccine.index');
+        return redirect()->route('admin.vaccines.index');
     }
 
     /**
@@ -81,6 +83,7 @@ class VaccineController extends Controller
     public function update(UpdateVaccineRequest $request, Vaccine $vaccine)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($data['name'], '-');
 
         $vaccine->update($data);
 

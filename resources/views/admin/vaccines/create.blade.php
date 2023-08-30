@@ -23,7 +23,7 @@
                     @csrf
                     <div class="form-group mt-4">
                         <label class="control-label">Nome vaccino</label>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Inserisci nome">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Inserisci nome">
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center my-5">
                         <button class="btn btn-success fw-bold px-5" type="submit">CREA</button>
