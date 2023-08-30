@@ -10,7 +10,7 @@ class Vaccine extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'slug'];
 
     public function animals(){
         return $this->belongsToMany(Animal::class)->withPivot('date', 'dosage', 'note');
