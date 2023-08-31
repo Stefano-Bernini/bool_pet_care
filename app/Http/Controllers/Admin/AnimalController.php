@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Animal;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
+use Illuminate\Support\Str;
 
 class AnimalController extends Controller
 {
@@ -40,6 +41,7 @@ class AnimalController extends Controller
     public function store(StoreAnimalRequest $request)
     {
         $form_data = $request->all();
+        $form_data['slug'] = Str::slug($form_data['nome'], '-');
 
         $animal = new Animal();
 
@@ -84,6 +86,7 @@ class AnimalController extends Controller
     public function update(UpdateAnimalRequest $request, Animal $animal)
     {
         $form_data = $request->all();
+        $form_data['slug'] = Str::slug($form_data['nome'], '-');
 
         $animal->update($form_data);
 
