@@ -6,8 +6,8 @@
             <div class="col-12 d-flex justify-content-evenly align-items-center my-5">
                 <h1>I nostri animali</h1>
                 <div class="btn-container">
-                    <a href="{{ Route('admin.animals.create') }}"><button class="btn btn-success">Aggiungi
-                            Animale</button></a>
+                    <a href="{{ Route('admin.vaccines.create') }}"><button class="btn btn-success">Aggiungi
+                            Vaccino</button></a>
                     <a href="{{ Route('admin.dashboard') }}"><button class="btn btn-dark">Dashboard</button></a>
                 </div>
             </div>
@@ -18,6 +18,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Slug</th>
+                            <th scope='col'>Strumenti</th>
                         </tr>
                     </thead>
                     <tbody>
