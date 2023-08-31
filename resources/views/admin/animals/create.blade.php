@@ -34,12 +34,6 @@
 
                     </div>
                     <div class="form-group mt-4">
-                        <label class="control-label">Vacinazioni</label>
-                        <input type="text" name="vacinazioni" id="vacinazioni" class="form-control"
-                            placeholder="Inserisci data di nascita">
-
-                    </div>
-                    <div class="form-group mt-4">
                         <label class="control-label">Malattie</label>
                         <input type="text" name="malattie" id="malattie" class="form-control"
                             placeholder="Inserisci malattie">
