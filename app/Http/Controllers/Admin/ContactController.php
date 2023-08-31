@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
@@ -15,7 +16,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+        return view('admin.contacts.index', compact('contacts'));
     }
 
     /**
@@ -47,7 +49,7 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        return view('admin.contacts.show', compact('contact'));
     }
 
     /**

@@ -20,10 +20,11 @@ class ContactSeeder extends Seeder
     {
         for($i = 0; $i < 10; $i++){
             $contact = new Contact;
-            
+
             $contact->name = $faker->firstName();
             $contact->last_name = $faker->lastName();
             $contact->email = $faker->safeEmail();
+            $contact->object = $faker->words(3, true);
             $contact->message = $faker->sentences(3, true);
 
             $contact->save();
