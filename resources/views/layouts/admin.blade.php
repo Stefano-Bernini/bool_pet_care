@@ -82,21 +82,21 @@
                             <!-- Sidebar -->
                             <nav id="sidebarMenu" class="side-bar">
                                 <div class="pt-4 ms-3">
-                                    <h3>Michele seleziona un titolo</h3>
+                                    <h3>Clinica Veterinaria</h3>
                                 </div>
                                 <div class="mt-5">
                                     <a href="{{ route('admin.animals.index') }}"
                                         class="list-group-item py-2 ripple {{ Route::currentRouteName() === 'admin.animals.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fas fa-chart-area fa-fw ms-3"></i>
-                                            <h4 class="ms-3">Bau Bau Muu Muu</h4>
+                                            <h4 class="ms-3">Animali</h4>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.vaccines.index') }}"
                                         class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.vaccines.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-code ms-3"></i>
-                                            <h4 class="ms-3">Vaccines</h4>
+                                            <h4 class="ms-3">Vaccini</h4>
                                         </div>
                                     </a>
                                 </div>

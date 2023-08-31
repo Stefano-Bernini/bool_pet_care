@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-evenly align-items-center my-5">
-                <h1>I nostri animali</h1>
+                <h1>Lista Vaccini</h1>
                 <div class="btn-container">
                     <a href="{{ Route('admin.vaccines.create') }}"><button class="btn btn-success">Aggiungi
                             Vaccino</button></a>
