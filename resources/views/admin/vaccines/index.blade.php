@@ -32,7 +32,7 @@
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.vaccines.edit', $item) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="{{ route('admin.vaccines.destroy', $item) }}"
+                                   <form action="{{ route('admin.vaccines.destroy', $item) }}"
                                         class="d-inline-block project-delete-button" method="POST">
                                         @csrf
                                         @method('DELETE')

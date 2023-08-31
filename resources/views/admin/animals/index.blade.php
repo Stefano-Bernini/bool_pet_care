@@ -37,10 +37,10 @@
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.animals.edit', $animal) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                        <form class='d-inline-block delete-animal-form' action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    <form class='d-inline-block delete-animal-form' action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                                     </form>                                        
                                 </td>
                             </tr>
