@@ -99,6 +99,13 @@
                                             <h5 class="ms-3">Vaccini</h5>
                                         </div>
                                     </a>
+                                    <a href="{{ route('admin.contacts.index') }}"
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.contacts.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        <div class="text-container d-flex align-items-center">
+                                            <i class="fa-solid fa-code ms-3"></i>
+                                            <h4 class="ms-3">Messaggi</h4>
+                                        </div>
+                                    </a>
                                 </div>
                             </nav>
                         </div>
