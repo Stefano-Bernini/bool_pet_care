@@ -7,10 +7,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     @vite(['resources/js/app.js'])
+    <!-- fontawesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -82,21 +82,21 @@
                             <!-- Sidebar -->
                             <nav id="sidebarMenu" class="side-bar">
                                 <div class="pt-4 ms-3">
-                                    <h3>Clinica Veterinaria</h3>
+                                    <h5>Clinica Veterinaria</h5>
                                 </div>
                                 <div class="mt-5">
                                     <a href="{{ route('admin.animals.index') }}"
                                         class="list-group-item py-2 ripple {{ Route::currentRouteName() === 'admin.animals.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
                                         <div class="text-container d-flex align-items-center">
-                                            <i class="fas fa-chart-area fa-fw ms-3"></i>
-                                            <h4 class="ms-3">Animali</h4>
+                                            <i class="fa-solid fa-paw ms-3"></i>
+                                            <h5 class="ms-3"> Animali</h5>   
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.vaccines.index') }}"
                                         class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.vaccines.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
                                         <div class="text-container d-flex align-items-center">
-                                            <i class="fa-solid fa-code ms-3"></i>
-                                            <h4 class="ms-3">Vaccini</h4>
+                                            <i class="fa-solid fa-syringe ms-3"></i>
+                                            <h5 class="ms-3">Vaccini</h5>
                                         </div>
                                     </a>
                                 </div>
