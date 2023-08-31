@@ -13,7 +13,6 @@
                         <h3>{{ $animal->nome }}</h3>
                     </div>
                     <h6 class="card-text">Specie: <strong>{{ $animal->specie }}</strong></h6>
-                    <p class="card-text">Vaccinazioni: <strong>{{ $animal->vacinazioni }}</strong></p>
                     <p class="card-text">Malattie: <strong>{{ $animal->malattie }}</strong></p>
                     <p class="card-text">Proprietario: <strong>{{ $animal->propietario }}</strong></p>
                 </div>

@@ -24,7 +24,22 @@ class StoreAnimalRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:30',
+            'specie' => 'required|max:50',
+            'malattie' => 'max:150',
+            'propietario' => 'required|max:40',
+        ];
+    }
+
+    public function messages(){
+        return[
+            'name.required' => 'Il nome è obbligatorio',
+            'name.max' => 'Il nome supera la lunghezza massima di :max',
+            'specie.required' => 'La specie è obbligatoria',
+            'specie.max' => 'La specie supera la lunghezza massima di :max',
+            'malattie.max' => 'Le malattie superano la lunghezza massima di :max',
+            'propietario.required' => 'Il propietario è obbligatorio',
+            'propietario.max' => 'Il propietario supera la lunghezza massima consentita di :max'
         ];
     }
 }
