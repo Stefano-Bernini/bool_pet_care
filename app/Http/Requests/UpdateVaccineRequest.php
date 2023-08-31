@@ -24,7 +24,14 @@ class UpdateVaccineRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:30',
+        ];
+    }
+
+    public function messages(){
+        return[
+            'name.required' => 'Il nome è obbligatorio',
+            'name.max' => 'Il nome supera la lunghezza massima di :max',
         ];
     }
 }
