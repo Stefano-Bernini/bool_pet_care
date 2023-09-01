@@ -56,6 +56,7 @@
                                 <a class="dropdown-item" href="{{ url('admin') }}">{{ __('Dashboard') }}</a>
                                 <a class="dropdown-item" href="{{ route('admin.animals.index') }}">Animali</a>
                                 <a class="dropdown-item" href="{{ route('admin.vaccines.index') }}">Vaccini</a>
+                                <a class="dropdown-item" href="{{ route('admin.owners.index') }}">Proprietari</a>
                                 <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();

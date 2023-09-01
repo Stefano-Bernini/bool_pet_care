@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Owner;
 use App\Http\Requests\StoreOwnerRequest;
 use App\Http\Requests\UpdateOwnerRequest;
+use App\Http\Controllers\Controller;
 
 class OwnerController extends Controller
 {
@@ -15,7 +16,8 @@ class OwnerController extends Controller
      */
     public function index()
     {
-        //
+        $owners = Owner::all();
+        return view('admin.owners.index', compact('owners'));
     }
 
     /**
