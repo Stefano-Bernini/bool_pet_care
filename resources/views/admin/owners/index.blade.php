@@ -17,7 +17,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Cognome</th>
-                            <th scope="col">Telefono</th>
+                            <th scope="col">Slug</th>
                             <th scope="col">Email</th>
                             <th scope="col">Strumenti</th>
                         </tr>
@@ -28,7 +28,7 @@
                                 <td>{{ $owner->id }}</td>
                                 <td>{{ $owner->name }}</td>
                                 <td>{{ $owner->surname }}</td>
-                                <td>{{ $owner->telephone }}</td>
+                                <td>{{ $owner->slug }}</td>
                                 <td>{{ $owner->email }}</td>
                                 <td>
                                     <a href="{{ route('admin.owners.show', $owner->id) }}"
