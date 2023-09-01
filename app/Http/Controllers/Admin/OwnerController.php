@@ -6,6 +6,7 @@ use App\Models\Owner;
 use App\Http\Requests\StoreOwnerRequest;
 use App\Http\Requests\UpdateOwnerRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class OwnerController extends Controller
 {
@@ -27,7 +28,7 @@ class OwnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.owners.create');
     }
 
     /**
@@ -38,7 +39,17 @@ class OwnerController extends Controller
      */
     public function store(StoreOwnerRequest $request)
     {
-        //
+        $data = $request->all();
+        $nameSurname= $data['name'].' '.$data['surname'];
+        $data['slug'] = Str::slug($nameSurname, '-');
+
+        $owner = new Owner();
+
+        $owner->fill($data);
+
+        $owner->save();
+
+        return redirect()->route('admin.owners.index');
     }
 
     /**
