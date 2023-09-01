@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('sicknesses', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 70);
+            $table->string('diagnosis', 120);
+            $table->string('treatment', 120);
+            $table->string('notes', 250);
+            $table->string('slug', 70);
             $table->timestamps();
         });
     }
