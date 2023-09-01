@@ -25,7 +25,8 @@ class OwnerSeeder extends Seeder
             $owner = new Owner();
             $owner->name = $faker->firstName();
             $owner->surname = $faker->lastName();
-            $owner->slug = Str::slug($owner->name);
+            $ownerName = $owner->name.' '.$owner->surname;
+            $owner->slug = Str::slug($ownerName, '-');
             $owner->address = $faker->address();
             $owner->telephone = $faker->phoneNumber();
             $owner->email = $faker->email();

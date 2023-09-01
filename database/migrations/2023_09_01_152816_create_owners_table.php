@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name', 30);
             $table->string('surname', 30);
             $table->string('slug', 65);
-            $table->string('address', 50);
-            $table->string('telephone', 15);
+            $table->string('address', 100);
+            $table->string('telephone', 30);
             $table->string('email', 30);
             $table->timestamps();
         });
