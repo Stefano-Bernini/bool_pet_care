@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Animal;
+use App\Models\Owner;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
 use Illuminate\Support\Str;
@@ -18,8 +19,9 @@ class AnimalController extends Controller
     public function index()
     {
         $animals = Animal::all();
+        $owners = Owner::all();
 
-        return view('admin.animals.index', compact('animals'));
+        return view('admin.animals.index', compact('animals', 'owners'));
     }
 
     /**
@@ -29,7 +31,8 @@ class AnimalController extends Controller
      */
     public function create()
     {
-        return view('admin.animals.create');
+        $owners = Owner::all();
+        return view('admin.animals.create', compact('owners'));
     }
 
     /**
@@ -62,7 +65,8 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        return view('admin.animals.show', compact('animal'));
+        $owners = Owner::all();
+        return view('admin.animals.show', compact('animal', 'owners'));
     }
 
     /**
@@ -73,7 +77,8 @@ class AnimalController extends Controller
      */
     public function edit(Animal $animal)
     {
-        return view('admin.animals.edit', compact('animal'));
+        $owners = Owner::all();
+        return view('admin.animals.edit', compact('animal', 'owners'));
     }
 
     /**

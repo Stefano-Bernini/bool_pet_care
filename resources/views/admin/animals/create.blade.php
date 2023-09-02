@@ -40,10 +40,13 @@
 
                     </div>
                     <div class="form-group mt-4">
-                        <label class="control-label">Nome proprietario</label>
-                        <input type="text" name="propietario" id="propietario" class="form-control"
-                            placeholder="Inserisci nome proprietario">
-
+                        <label class="control-label">Scegli il proprietario</label>
+                        <select name="owner_id" id="owner_id" class="form-control">
+                            <option value="" selected>Seleziona un proprietario</option>
+                            @foreach ($owners as $owner)
+                                <option value="{{ $owner->id }}">{{ $owner->name }} {{ $owner->surname }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center my-5">
                         <button class="btn btn-success fw-bold px-5" type="submit">CREA</button>
