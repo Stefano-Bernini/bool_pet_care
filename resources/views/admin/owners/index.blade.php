@@ -35,11 +35,11 @@
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.owners.edit', $owner) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                        <form class='d-inline-block delete-animal-form' action="{{ route('admin.owners.destroy', $owner->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                                    </form>                                        
+                                    <form class='d-inline-block project-delete-button' action="{{ route('admin.owners.destroy', $owner->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </form>                                     
                                 </td>
                             </tr>
                         @endforeach

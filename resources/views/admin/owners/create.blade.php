@@ -42,13 +42,13 @@
                     <div class="form-group mt-4">
                         <label class="control-label">Telefono</label>
                         <input type="text" name="telephone" id="telephone" class="form-control"
-                            placeholder="Inserisci nome proprietario" value="{{old('telephone')}}">
+                            placeholder="Inserisci telefono proprietario" value="{{old('telephone')}}">
 
                     </div>
                     <div class="form-group mt-4">
                         <label class="control-label">Email</label>
                         <input type="text" name="email" id="email" class="form-control"
-                            placeholder="Inserisci nome proprietario" value="{{old('email')}}">
+                            placeholder="Inserisci email proprietario" value="{{old('email')}}">
 
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center my-5">

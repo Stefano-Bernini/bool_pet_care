@@ -71,7 +71,7 @@ class OwnerController extends Controller
      */
     public function edit(Owner $owner)
     {
-        //
+        return view('admin.owners.edit', compact('owner'));
     }
 
     /**
@@ -83,7 +83,13 @@ class OwnerController extends Controller
      */
     public function update(UpdateOwnerRequest $request, Owner $owner)
     {
-        //
+        $data = $request->all();
+        $nameSurname = $data['name'].' '.$data['surname'];
+        $data['slug'] = Str::slug($nameSurname, '-');
+
+        $owner->update($data);
+
+        return redirect()->route('admin.owners.index');
     }
 
     /**
@@ -94,6 +100,8 @@ class OwnerController extends Controller
      */
     public function destroy(Owner $owner)
     {
-        //
+        $owner->delete();
+        
+        return redirect()->route('admin.owners.index');
     }
 }
