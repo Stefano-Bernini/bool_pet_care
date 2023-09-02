@@ -23,19 +23,19 @@
                     @csrf
                     <div class="form-group mt-4">
                         <label class="control-label">Nome animale</label>
-                        <input type="text" name="nome" id="nome" class="form-control"
+                        <input type="text" name="nome" id="nome" class="form-control" value="{{ old('nome') }}"
                             placeholder="Inserisci nome">
 
                     </div>
                     <div class="form-group mt-4">
                         <label class="control-label">Specie</label>
-                        <input type="text" name="specie" id="specie" class="form-control"
+                        <input type="text" name="specie" id="specie" class="form-control" value="{{ old('specie') }}"
                             placeholder="Inserisci specie">
 
                     </div>
                     <div class="form-group mt-4">
                         <label class="control-label">Malattie</label>
-                        <input type="text" name="malattie" id="malattie" class="form-control"
+                        <input type="text" name="malattie" id="malattie" class="form-control" value="{{ old('malattie') }}"
                             placeholder="Inserisci malattie">
 
                     </div>
