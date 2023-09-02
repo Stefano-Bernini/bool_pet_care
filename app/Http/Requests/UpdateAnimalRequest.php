@@ -25,7 +25,7 @@ class UpdateAnimalRequest extends FormRequest
     {
         return [
             'nome' => 'required|max:30',
-            'specie' => 'required|max:50',
+            'breed_id' => 'required',
             'malattie' => 'max:150',
             'propietario' => 'required|max:40',
         ];
@@ -35,8 +35,7 @@ class UpdateAnimalRequest extends FormRequest
         return[
             'nome.required' => 'Il nome è obbligatorio',
             'nome.max' => 'Il nome supera la lunghezza massima di :max',
-            'specie.required' => 'La specie è obbligatoria',
-            'specie.max' => 'La specie supera la lunghezza massima di :max',
+            'breed_id.required' => 'La specie è obbligatoria',
             'malattie.max' => 'Le malattie superano la lunghezza massima di :max',
             'propietario.required' => 'Il propietario è obbligatorio',
             'propietario.max' => 'Il propietario supera la lunghezza massima consentita di :max'

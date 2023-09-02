@@ -12,7 +12,7 @@
                     <div class="card-title d-flex">
                         <h3>{{ $animal->nome }}</h3>
                     </div>
-                    <h6 class="card-text">Specie: <strong>{{ $animal->specie }}</strong></h6>
+                    <h6 class="card-text">Specie: <strong>{{ $animal->breed->name }}</strong></h6>
                     <p class="card-text">Malattie: <strong>{{ $animal->malattie }}</strong></p>
                     <p class="card-text">Proprietario: <strong>{{ $animal->propietario }}</strong></p>
                 </div>
