@@ -18,12 +18,11 @@ class VaccineSeeder extends Seeder
     public function run(Faker $faker)
     {
         for($i=0; $i<10; $i++){
-            $animal = new Vaccine();
+            $vaccine = new Vaccine();
+            $vaccine->name = $faker->word(1);
+            $vaccine->slug = Str::slug($vaccine->name);
 
-            $animal->name = $faker->word(1);
-            $animal->slug = Str::slug($animal->name);
-            
-            $animal->save();
+            $vaccine->save();
         }
     }
 }

@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+// adding ++++
 use App\Models\Vaccine;
 use App\Models\Owner;
 use App\Models\Breed;
 
+use App\Models\Sickness;
 
 
 class Animal extends Model
@@ -15,10 +17,12 @@ class Animal extends Model
     use HasFactory;
 
     protected $fillable = ['nome', 'slug', 'specie', 'vacinazioni', 'malattie', 'owner_id'];
-    protected $fillable = ['nome', 'slug', 'breed_id', 'vacinazioni', 'malattie', 'propietario'];
 
     public function vaccines(){
         return $this->belongsToMany(Vaccine::class)->withPivot('date', 'dosage', 'note');
+    }
+    public function sicknesses(){
+        return $this->belongsToMany(Sickness::class);
     }
 
     public function owner(){
