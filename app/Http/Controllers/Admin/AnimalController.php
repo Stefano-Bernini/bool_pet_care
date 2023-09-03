@@ -33,9 +33,8 @@ class AnimalController extends Controller
     public function create()
     {
         $owners = Owner::all();
-        return view('admin.animals.create', compact('owners'));
         $breeds = Breed::all();
-        return view('admin.animals.create', compact('breeds'));
+        return view('admin.animals.create', compact('breeds', 'owners'));
     }
 
     /**
@@ -68,8 +67,7 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        $owners = Owner::all();
-        return view('admin.animals.show', compact('animal', 'owners'));
+        return view('admin.animals.show', compact('animal'));
     }
 
     /**
@@ -81,9 +79,8 @@ class AnimalController extends Controller
     public function edit(Animal $animal)
     {
         $owners = Owner::all();
-        return view('admin.animals.edit', compact('animal', 'owners'));
         $breeds = Breed::all();
-        return view('admin.animals.edit', compact('animal', 'breeds'));
+        return view('admin.animals.edit', compact('animal', 'breeds', 'owners'));
     }
 
     /**

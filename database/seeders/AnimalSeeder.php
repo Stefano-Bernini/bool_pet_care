@@ -20,11 +20,11 @@ class AnimalSeeder extends Seeder
     {
         for($i=0; $i<10; $i++){
             $animal = new Animal();
+            $animal->owner_id = random_int(1, 10);
             $animal->nome = $faker->word(1);
             $animal->slug = Str::slug($animal->nome, '-');
             $animal->breed_id = random_int(1, 5);
             $animal->malattie = $faker->words(4, true);
-            $animal->propietario = $faker->name();
             
             $animal->save();
         }
