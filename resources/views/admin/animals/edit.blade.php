@@ -33,7 +33,7 @@
                         <select class="form-control" name="breed_id" id="breed_id">
                             <option value="" disabled selected>Scegli la specie</option>
                             @foreach ($breeds as $breed)
-                                <option value="{{ $breed->id }}">{{ $breed->name }}</option>
+                                <option value="{{ $breed->id }}" @selected(old('breed_id', $animal->breed_id) == $breed->id )>{{ $breed->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -48,7 +48,7 @@
                         <select name="owner_id" id="owner_id" class="form-control">
                             <option value="" selected>Seleziona un proprietario</option>
                             @foreach ($owners as $owner)
-                                <option value="{{ $owner->id }}">{{ $owner->name }} {{ $owner->surname }}</option>
+                                <option value="{{ $owner->id }}" @selected(old('owner_id', $animal->owner_id) == $owner->id )>{{ $owner->name }} {{ $owner->surname }}</option>
                             @endforeach
                         </select>
                     </div>
