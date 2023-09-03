@@ -16,7 +16,7 @@
                             <th scope="col">Oggetto</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Strumenti</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,8 +26,7 @@
                                 <td>{{ $item->name.' '.$item->last_name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>
-                                    <a href="{{ route('admin.contacts.show', $item->id) }}"
-                                        class="btn btn-sm btn-primary">Show</a>
+                                    <a href="{{ route('admin.contacts.show', $item->id) }}" class="btn btn-sm btn-primary">Show</a>
                                 </td>
                             </tr>
                         @endforeach

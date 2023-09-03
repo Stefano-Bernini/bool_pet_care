@@ -4,7 +4,7 @@
     <div class="container mt-5">
         <div class="row justify-content-between">
             <div class="col-12">
-                <h1>Aggiungi un nuovo animale</h1>
+                <h1>Aggiungi una nuova malattia</h1>
 
             </div>
             <div class="col-12 mt-5">

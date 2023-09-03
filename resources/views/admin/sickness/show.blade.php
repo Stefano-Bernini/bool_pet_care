@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card mt-5">
                 <div class="card-header d-flex justify-content-between">
-                    <h4>Paziente n°{{ $sickness->id }}</h4>
+                    <h4>Malattia n°{{ $sickness->id }}</h4>
                     <a class="btn btn-primary" href="{{ url('admin/animals') }}">Torna indietro</a>
                 </div>
                 <div class="card-body">

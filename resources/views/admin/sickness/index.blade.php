@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-evenly align-items-center my-5">
-                <h1>I nostri animali</h1>
+                <h1>Malattie trattate</h1>
                 <div class="btn-container">
                     <a href="{{ Route('admin.sickness.create') }}"><button class="btn btn-success">Aggiungi
                             Malattia</button></a>
@@ -18,8 +18,9 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Diagnosi</th>
-                            <th scope="col">Tratamento</th>
+                            <th scope="col">Trattamento</th>
                             <th scope="col">Note</th>
+                            <th scope="col">Strumenti</th>
                         </tr>
                     </thead>
                     <tbody>
