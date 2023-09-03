@@ -7,7 +7,7 @@
                 <h1>I nostri animali</h1>
                 <div class="btn-container">
                     <a href="{{ Route('admin.sickness.create') }}"><button class="btn btn-success">Aggiungi
-                            Animale</button></a>
+                            Malattia</button></a>
                     <a href="{{ Route('admin.animals.index') }}"><button class="btn btn-dark">Dashboard</button></a>
                 </div>
             </div>
