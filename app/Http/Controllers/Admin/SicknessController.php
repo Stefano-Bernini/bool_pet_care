@@ -1,10 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Sickness;
 use App\Http\Requests\StoreSicknessRequest;
 use App\Http\Requests\UpdateSicknessRequest;
+// inserted
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
+
+
 
 class SicknessController extends Controller
 {
@@ -15,7 +20,9 @@ class SicknessController extends Controller
      */
     public function index()
     {
-        //
+        $sicknesses = Sickness::all();
+
+        return view('admin.sickness.index', compact('sicknesses'));
     }
 
     /**
@@ -25,7 +32,7 @@ class SicknessController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.sickness.create');
     }
 
     /**
@@ -36,7 +43,17 @@ class SicknessController extends Controller
      */
     public function store(StoreSicknessRequest $request)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($data['name'], '-');
+
+        $sickness = new Sickness();
+
+
+        $sickness->fill($data);
+
+        $sickness->save();
+
+        return redirect()->route('admin.sickness.index');
     }
 
     /**
@@ -47,7 +64,7 @@ class SicknessController extends Controller
      */
     public function show(Sickness $sickness)
     {
-        //
+        return view('admin.sickness.show', compact('sickness'));
     }
 
     /**
@@ -58,7 +75,7 @@ class SicknessController extends Controller
      */
     public function edit(Sickness $sickness)
     {
-        //
+        return view('admin.sickness.edit', compact('sickness'));
     }
 
     /**
@@ -70,7 +87,12 @@ class SicknessController extends Controller
      */
     public function update(UpdateSicknessRequest $request, Sickness $sickness)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($data['name'], '-');
+
+        $sickness->update($data);
+
+        return redirect()->route('admin.sickness.show', $sickness->id);
     }
 
     /**
@@ -81,6 +103,7 @@ class SicknessController extends Controller
      */
     public function destroy(Sickness $sickness)
     {
-        //
+        $sickness->delete();
+        return redirect()->route('admin.sickness.index');
     }
 }
