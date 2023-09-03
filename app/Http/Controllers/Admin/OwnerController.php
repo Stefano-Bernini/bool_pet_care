@@ -100,6 +100,7 @@ class OwnerController extends Controller
      */
     public function destroy(Owner $owner)
     {
+        $owner->animals()->delete();
         $owner->delete();
         
         return redirect()->route('admin.owners.index');

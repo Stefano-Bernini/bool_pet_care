@@ -99,6 +99,7 @@ class BreedController extends Controller
      */
     public function destroy(Breed $breed)
     {
+        $breed->animals()->delete();
         $breed->delete();
         return redirect()->route('admin.breeds.index');
     }
