@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Animal;
 use App\Models\Owner;
+use App\Models\Breed;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
 use Illuminate\Support\Str;
@@ -33,6 +34,8 @@ class AnimalController extends Controller
     {
         $owners = Owner::all();
         return view('admin.animals.create', compact('owners'));
+        $breeds = Breed::all();
+        return view('admin.animals.create', compact('breeds'));
     }
 
     /**
@@ -79,6 +82,8 @@ class AnimalController extends Controller
     {
         $owners = Owner::all();
         return view('admin.animals.edit', compact('animal', 'owners'));
+        $breeds = Breed::all();
+        return view('admin.animals.edit', compact('animal', 'breeds'));
     }
 
     /**

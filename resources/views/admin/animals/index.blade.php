@@ -28,7 +28,7 @@
                             <tr>
                                 <td>{{ $animal->id }}</td>
                                 <td>{{ $animal->nome }}</td>
-                                <td>{{ $animal->specie }}</td>
+                                <td>{{ $animal->breed->name }}</td>
                                 {{-- <td>{{ $animal->vacinazioni }}</td> --}}
                                 <td>{{ $animal->malattie }}</td>
                                 <td>{{ (isset($animal->owner_id)) ? $animal->owner->name : '' }} {{ (isset($animal->owner_id)) ? $animal->owner->surname : '' }}</td>

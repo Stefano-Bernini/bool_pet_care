@@ -43,12 +43,12 @@ class VaccineController extends Controller
         $data = $request->all();
         $data['slug'] = Str::slug($data['name'], '-');
 
-        $animal = new Vaccine();
+        $vaccine = new Vaccine();
 
 
-        $animal->fill($data);
+        $vaccine->fill($data);
 
-        $animal->save();
+        $vaccine->save();
 
         return redirect()->route('admin.vaccines.index');
     }
@@ -89,7 +89,7 @@ class VaccineController extends Controller
 
         $vaccine->update($data);
 
-        return redirect()->route('admin.vaccines.show', $vaccine->id);
+        return redirect()->route('admin.vaccines.show', $vaccine);
     }
 
     /**

@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Animal;
 
 return new class extends Migration
 {
@@ -14,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('animals', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 30);
-            $table->string('malattie', 150);
-            $table->string('propietario', 40);
-            $table->timestamps();
+        Schema::table('animals', function (Blueprint $table) {
+            $table->unsignedBigInteger('breed_id')->after('slug')->nullable();
+            $table->foreign('breed_id')->references('id')->on('breeds');
         });
     }
 
@@ -31,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('animals', function (Blueprint $table) {
-            $table->dropColumn('propietario');
+            $table->dropForeign('animals_breed_id_foreign');
+            $table->dropColumn('breed_id');
         });
     }
 };

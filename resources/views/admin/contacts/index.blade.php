@@ -23,7 +23,7 @@
                         @foreach ($contacts as $item)
                             <tr>
                                 <td>{{ $item->object }}</td>
-                                <td>{{ $item->name.$item->last_name }}</td>
+                                <td>{{ $item->name.' '.$item->last_name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>
                                     <a href="{{ route('admin.contacts.show', $item->id) }}"

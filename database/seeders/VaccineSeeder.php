@@ -19,9 +19,10 @@ class VaccineSeeder extends Seeder
     {
         for($i=0; $i<10; $i++){
             $animal = new Vaccine();
+
             $animal->name = $faker->word(1);
             $animal->slug = Str::slug($animal->name);
-
+            
             $animal->save();
         }
     }

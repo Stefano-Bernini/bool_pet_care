@@ -57,6 +57,7 @@
                                 <a class="dropdown-item" href="{{ route('admin.animals.index') }}">Animali</a>
                                 <a class="dropdown-item" href="{{ route('admin.vaccines.index') }}">Vaccini</a>
                                 <a class="dropdown-item" href="{{ route('admin.owners.index') }}">Proprietari</a>
+                                <a class="dropdown-item" href="{{ route('admin.breeds.index') }}">Specie</a>
                                 <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
@@ -91,6 +92,13 @@
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-paw ms-3"></i>
                                             <h5 class="ms-3"> Animali</h5>   
+                                        </div>
+                                    </a>
+                                    <a href="{{ route('admin.breeds.index') }}"
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.breeds.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        <div class="text-container d-flex align-items-center">
+                                            <i class="fa-solid fa-paw ms-3"></i>
+                                            <h5 class="ms-3">Specie</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.vaccines.index') }}"

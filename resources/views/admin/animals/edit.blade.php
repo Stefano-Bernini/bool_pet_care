@@ -30,9 +30,12 @@
                     </div>
                     <div class="form-group mt-4">
                         <label class="control-label">Specie</label>
-                        <input type="text" name="specie" id="specie" class="form-control"
-                            placeholder="Inserisci specie" value="{{ old('specie') ?? $animal->specie }}">
-
+                        <select class="form-control" name="breed_id" id="breed_id">
+                            <option value="" disabled selected>Scegli la specie</option>
+                            @foreach ($breeds as $breed)
+                                <option value="{{ $breed->id }}">{{ $breed->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group mt-4">
                         <label class="control-label">Malattie</label>

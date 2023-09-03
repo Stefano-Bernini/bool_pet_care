@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Animal;
+
 
 return new class extends Migration
 {
@@ -14,11 +14,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('animals', function (Blueprint $table) {
+        Schema::create('breeds', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 30);
-            $table->string('malattie', 150);
-            $table->string('propietario', 40);
+
+            $table->string('name');
+            $table->string('slug');
+
             $table->timestamps();
         });
     }
@@ -30,8 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('animals', function (Blueprint $table) {
-            $table->dropColumn('propietario');
-        });
+        Schema::dropIfExists('breeds');
     }
 };
