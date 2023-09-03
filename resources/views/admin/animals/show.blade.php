@@ -14,7 +14,7 @@
                     </div>
                     <h6 class="card-text">Specie: <strong>{{ $animal->specie }}</strong></h6>
                     <p class="card-text">Malattie: <strong>{{ $animal->malattie }}</strong></p>
-                    <p class="card-text">Proprietario: <strong>{{ $animal->propietario }}</strong></p>
+                    <p class="card-text">Proprietario: <strong>{{ $animal->owner->name }} {{ $animal->owner->surname }}</strong></p>
                 </div>
             </div>
         </div>

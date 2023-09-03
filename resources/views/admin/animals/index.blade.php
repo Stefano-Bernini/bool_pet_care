@@ -31,7 +31,7 @@
                                 <td>{{ $animal->specie }}</td>
                                 {{-- <td>{{ $animal->vacinazioni }}</td> --}}
                                 <td>{{ $animal->malattie }}</td>
-                                <td>{{ $animal->propietario }}</td>
+                                <td>{{ (isset($animal->owner_id)) ? $animal->owner->name : '' }} {{ (isset($animal->owner_id)) ? $animal->owner->surname : '' }}</td>
                                 <td>
                                     <a href="{{ route('admin.animals.show', $animal->id) }}"
                                         class="btn btn-sm btn-primary">Show</a>

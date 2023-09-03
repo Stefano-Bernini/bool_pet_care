@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\AnimalController as AnimalController;
 use App\Http\Controllers\Admin\VaccineController as VaccineController;
 use App\Http\Controllers\Admin\ContactController as ContactController;
 
+use App\Http\Controllers\Admin\OwnerController as OwnerController;
 
 
 /*
@@ -32,6 +33,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('vaccines', VaccineController::class);
     Route::get('/contacts',[ContactController::class, 'index'])->name('contacts.index');
     Route::get('/contacts/{contact}',[ContactController::class, 'show'])->name('contacts.show');
+    Route::resource('owners', OwnerController::class);
 });
 
 

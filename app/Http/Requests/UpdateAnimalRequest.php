@@ -27,7 +27,7 @@ class UpdateAnimalRequest extends FormRequest
             'nome' => 'required|max:30',
             'specie' => 'required|max:50',
             'malattie' => 'max:150',
-            'propietario' => 'required|max:40',
+            'owner_id' => 'required|exists:owners,id',
         ];
     }
 
@@ -38,8 +38,8 @@ class UpdateAnimalRequest extends FormRequest
             'specie.required' => 'La specie è obbligatoria',
             'specie.max' => 'La specie supera la lunghezza massima di :max',
             'malattie.max' => 'Le malattie superano la lunghezza massima di :max',
-            'propietario.required' => 'Il propietario è obbligatorio',
-            'propietario.max' => 'Il propietario supera la lunghezza massima consentita di :max'
+            'owner_id.required' => 'Il proprietario è obbligatorio',
+            'owner_id.exists' => 'Proprietario selezionato non valido',
         ];
     }
 }
