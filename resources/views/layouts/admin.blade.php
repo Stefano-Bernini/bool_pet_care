@@ -90,42 +90,42 @@
                                 </div>
                                 <div class="mt-5">
                                     <a href="{{ route('admin.animals.index') }}"
-                                        class="list-group-item py-2 ripple {{ Route::currentRouteName() === 'admin.animals.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        class="list-group-item py-2 ripple {{ Route::currentRouteName() === 'admin.animals.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-paw ms-3"></i>
                                             <h5 class="ms-3"> Animali</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.breeds.index') }}"
-                                    class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.breeds.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                    class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.breeds.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-paw ms-3"></i>
                                             <h5 class="ms-3">Specie</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.owners.index') }}"
-                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.owners.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.owners.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-user ms-3"></i>
                                             <h5 class="ms-3">Proprietari</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.vaccines.index') }}"
-                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.vaccines.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.vaccines.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-syringe ms-3"></i>
                                             <h5 class="ms-3">Vaccini</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.contacts.index') }}"
-                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.contacts.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.contacts.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-envelope ms-3"></i>
                                             <h5 class="ms-3">Messaggi</h5>
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.sickness.index') }}"
-                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.sickness.index' ? 'list-group-item-action list-group-item-danger' : '' }}">
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.sickness.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-dna ms-3"></i>
                                             <h5 class="ms-3">Malattie</h5>
