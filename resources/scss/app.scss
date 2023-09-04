@@ -14,3 +14,11 @@
     height: 100vh;
     padding-top: 1rem;
 }
+
+.min-width {
+    min-width: 170px;
+}
+
+.adjust {
+    width: calc(100% - 250px);
+}
