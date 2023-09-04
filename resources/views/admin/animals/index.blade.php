@@ -6,7 +6,8 @@
             <div class="col-12 d-flex justify-content-evenly align-items-center my-5">
                 <h1>I nostri animali</h1>
                 <div class="btn-container">
-                    <a href="{{ Route('admin.animals.create') }}"><button class="btn btn-success">Aggiungi Animale</button></a>
+                    <a href="{{ Route('admin.animals.create') }}"><button class="btn btn-success">Aggiungi
+                            Animale</button></a>
                     <a href="{{ Route('admin.dashboard') }}"><button class="btn btn-dark">Dashboard</button></a>
                 </div>
             </div>
@@ -28,20 +29,22 @@
                             <tr>
                                 <td>{{ $animal->id }}</td>
                                 <td>{{ $animal->nome }}</td>
-                                <td>{{ $animal->breed->name }}</td>
+                                <td>{{ isset($animal->breed->name) ? $animal->breed->name : '' }}</td>
                                 {{-- <td>{{ $animal->vacinazioni }}</td> --}}
                                 <td>{{ $animal->malattie }}</td>
-                                <td>{{ (isset($animal->owner_id)) ? $animal->owner->name : '' }} {{ (isset($animal->owner_id)) ? $animal->owner->surname : '' }}</td>
+                                <td>{{ isset($animal->owner_id) ? $animal->owner->name : '' }}
+                                    {{ isset($animal->owner_id) ? $animal->owner->surname : '' }}</td>
                                 <td>
                                     <a href="{{ route('admin.animals.show', $animal->id) }}"
                                         class="btn btn-sm btn-primary">Show</a>
                                     <a href="{{ route('admin.animals.edit', $animal) }}"
                                         class="btn btn-sm btn-warning">Edit</a>
-                                    <form class='d-inline-block delete-animal-form' action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
+                                    <form class='d-inline-block delete-animal-form'
+                                        action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                                    </form>                                        
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
