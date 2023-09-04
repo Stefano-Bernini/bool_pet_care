@@ -15,6 +15,7 @@
                     <h6 class="card-text">Specie: <strong>{{ $animal->breed->name }}</strong></h6>
                     <p class="card-text">Malattie: <strong>{{ $animal->malattie }}</strong></p>
                     <p class="card-text">Proprietario: <strong>{{ $animal->owner->name }} {{ $animal->owner->surname }}</strong></p>
+                    <a class="btn btn-primary" href="{{ url('admin/animals/'.$animal->id.'/vaccinations') }}">Lista vaccinazioni</a>
                 </div>
             </div>
         </div>

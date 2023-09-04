@@ -11,7 +11,8 @@ class Vaccination extends Model
 {
     use HasFactory;
 
-    protected $table = 'animal_vaccination';
+    protected $table = 'animal_vaccine';
+    protected $fillable = ['animal_id', 'vaccine_id', 'date', 'dosage', 'note'];
     
     public function animal(){
         return $this->belongsTo(Animal::class);
