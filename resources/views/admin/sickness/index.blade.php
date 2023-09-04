@@ -19,7 +19,6 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Diagnosi</th>
                             <th scope="col">Trattamento</th>
-                            <th scope="col">Note</th>
                             <th scope="col">Strumenti</th>
                         </tr>
                     </thead>
@@ -30,7 +29,6 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->diagnosis }}</td>
                                 <td>{{ $item->treatment }}</td>
-                                <td class="col-4">{{ $item->notes }}</td>
                                 <td>
                                     <a href="{{ route('admin.sickness.show', $item->id) }}"
                                         class="btn btn-sm btn-primary">Show</a>
