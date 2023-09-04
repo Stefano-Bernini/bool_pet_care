@@ -28,10 +28,10 @@
                             <tr>
                                 <td>{{ $animal->id }}</td>
                                 <td>{{ $animal->nome }}</td>
-                                <td>{{ isset($animal->breed->name) ? $animal->breed->name : '' }}</td>
+                                <td>{{ isset($animal->breed->name) ? $animal->breed->name : 'Selezionare specie' }}</td>
                                 {{-- <td>{{ $animal->vacinazioni }}</td> --}}
                                 <td>{{ $animal->malattie }}</td>
-                                <td>{{ isset($animal->owner_id) ? $animal->owner->name : '' }}
+                                <td>{{ isset($animal->owner_id) ? $animal->owner->name : 'Selezionare proprietario' }}
                                     {{ isset($animal->owner_id) ? $animal->owner->surname : '' }}</td>
                                 <td>
                                     <a href="{{ route('admin.animals.show', $animal->id) }}"
