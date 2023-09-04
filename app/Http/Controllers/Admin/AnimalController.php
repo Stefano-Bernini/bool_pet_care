@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Animal;
 use App\Models\Owner;
 use App\Models\Breed;
+use App\Models\Vaccination;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
 use Illuminate\Support\Str;
@@ -67,7 +68,8 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        return view('admin.animals.show', compact('animal'));
+        $vaccinations = Vaccination::where('animal_id', '=', $animal->id)->orderBy('date', 'desc')->get();
+        return view('admin.animals.show', compact('animal', 'vaccinations'));
     }
 
     /**
