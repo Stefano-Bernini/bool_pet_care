@@ -48,42 +48,8 @@ class VaccinationController extends Controller
         $vaccination->fill($data);
         $vaccination->save();
 
-        return redirect()->route('admin.vaccinations.index', $data['animal_id']);
+        return redirect()->route('admin.animals.show', $data['animal_id']);
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Vaccination  $vaccination
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Vaccination $vaccination)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Vaccination  $vaccination
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Vaccination $vaccination)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateVaccinationRequest  $request
-     * @param  \App\Models\Vaccination  $vaccination
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateVaccinationRequest $request, Vaccination $vaccination)
-    {
-        //
     }
 
     /**

@@ -22,7 +22,7 @@
                 <form action="{{ route('admin.vaccinations.store') }}" method="POST">
                     @csrf
                     <div class="form-group mt-4">
-                        <label class="control-label">Nome vaccino</label>
+                        <label class="control-label">Nome animale</label>
                         <select type="text" name="animal_id" id="animal_id" class="form-control">
                             <option value="" selected disabled>Inserisci vaccino</option>
                             @foreach ($animals as $item)

@@ -17,7 +17,6 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Specie</th>
-                            {{-- <th scope="col">Vaccinazioni</th> --}}
                             <th scope="col">Malattie</th>
                             <th scope="col">Proprietario</th>
                             <th scope="col">Strumenti</th>
@@ -29,7 +28,6 @@
                                 <td>{{ $animal->id }}</td>
                                 <td>{{ $animal->nome }}</td>
                                 <td>{{ $animal->breed->name }}</td>
-                                {{-- <td>{{ $animal->vacinazioni }}</td> --}}
                                 <td>{{ $animal->malattie }}</td>
                                 <td>{{ (isset($animal->owner_id)) ? $animal->owner->name : '' }} {{ (isset($animal->owner_id)) ? $animal->owner->surname : '' }}</td>
                                 <td>

@@ -16,7 +16,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Vaccino</th>
-                            <th scope='col'>Dosaggio</th>
+                            <th scope='col'>Dosaggio (mg)</th>
                             <th scope="col">Note</th>
                             <th scope="col">Data</th>
                         </tr>

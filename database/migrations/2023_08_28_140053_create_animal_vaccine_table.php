@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('animal_vaccine', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('animal_id');
             $table->foreign('animal_id')->references('id')->on('animals');
             $table->unsignedBigInteger('vaccine_id');
@@ -21,7 +22,8 @@ return new class extends Migration
 
             $table->date('date');
             $table->string('dosage', 50);
-            $table->text('note');
+            $table->text('note')->nullable();
+            $table->timestamps();
         });
     }
 
