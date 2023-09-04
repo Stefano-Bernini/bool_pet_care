@@ -26,7 +26,7 @@
                                 <td>{{ $item->name.' '.$item->last_name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>
-                                    <a href="{{ route('admin.contacts.show', $item->id) }}" class="btn btn-sm btn-primary">Show</a>
+                                    <a href="{{ route('admin.contacts.show', $item->id) }}" class="btn btn-sm btn-primary">Mostra</a>
                                 </td>
                             </tr>
                         @endforeach

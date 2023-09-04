@@ -35,14 +35,14 @@
                                     {{ isset($animal->owner_id) ? $animal->owner->surname : '' }}</td>
                                 <td>
                                     <a href="{{ route('admin.animals.show', $animal->id) }}"
-                                        class="btn btn-sm btn-primary">Show</a>
+                                        class="btn btn-sm btn-primary">Mostra</a>
                                     <a href="{{ route('admin.animals.edit', $animal) }}"
-                                        class="btn btn-sm btn-warning">Edit</a>
+                                        class="btn btn-sm btn-warning">Modifica</a>
                                     <form class='d-inline-block delete-animal-form'
                                         action="{{ route('admin.animals.destroy', $animal->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                        <button class="btn btn-danger btn-sm" type="submit">Cancella</button>
                                     </form>
                                 </td>
                             </tr>

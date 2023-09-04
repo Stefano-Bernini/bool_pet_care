@@ -29,16 +29,16 @@
                                 <td>{{ $item->slug }}</td>
                                 <td>
                                     <a href="{{ route('admin.vaccines.show', $item->id) }}"
-                                        class="btn btn-sm btn-primary">Show</a>
+                                        class="btn btn-sm btn-primary">Mostra</a>
                                     <a href="{{ route('admin.vaccines.edit', $item) }}"
-                                        class="btn btn-sm btn-warning">Edit</a>
+                                        class="btn btn-sm btn-warning">Modifica</a>
                                    <form action="{{ route('admin.vaccines.destroy', $item) }}"
                                         class="d-inline-block project-delete-button" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger " data-bs-toggle="modal"
                                             data-bs-target="#staticBackdrop">
-                                            Delete
+                                            Cancella
                                     </form>
                                 </td>
                             </tr>

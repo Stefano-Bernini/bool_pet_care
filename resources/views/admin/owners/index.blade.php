@@ -32,13 +32,13 @@
                                 <td>{{ $owner->email }}</td>
                                 <td>
                                     <a href="{{ route('admin.owners.show', $owner->id) }}"
-                                        class="btn btn-sm btn-primary">Show</a>
+                                        class="btn btn-sm btn-primary">Mostra</a>
                                     <a href="{{ route('admin.owners.edit', $owner) }}"
-                                        class="btn btn-sm btn-warning">Edit</a>
+                                        class="btn btn-sm btn-warning">Modifica</a>
                                     <form class='d-inline-block project-delete-button' action="{{ route('admin.owners.destroy', $owner->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                        <button class="btn btn-danger btn-sm" type="submit">Cancella</button>
                                     </form>                                     
                                 </td>
                             </tr>
