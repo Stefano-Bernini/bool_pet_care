@@ -79,9 +79,9 @@
     </nav>
     <main>
         <main>
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <div class="row">
-                    <div class="col-1 px-0">
+                    <div class="col-1 px-0 min-width">
                         <div class="sidebar background-color">
                             <!-- Sidebar -->
                             <nav id="sidebarMenu" class="side-bar">
@@ -97,7 +97,7 @@
                                         </div>
                                     </a>
                                     <a href="{{ route('admin.breeds.index') }}"
-                                    class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.breeds.index' ? 'list-group-item-action list-group-item-success' : '' }}">
+                                        class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() === 'admin.breeds.index' ? 'list-group-item-action list-group-item-success' : '' }}">
                                         <div class="text-container d-flex align-items-center">
                                             <i class="fa-solid fa-paw ms-3"></i>
                                             <h5 class="ms-3">Specie</h5>
@@ -135,7 +135,7 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="col-11">
+                    <div class="col-11 adjust">
                         <div class="padding_main">
                             @yield('content')
                         </div>
